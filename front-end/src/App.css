@@ -1,42 +1,52 @@
-#root {
-  max-width: 1280px;
+:root {
+  --clr-prm-high: hsl(180, 66%, 49%);
+  --clr-prm-dark: hsl(257, 27%, 26%);
+
+  --clr-s-err: hsl(0, 87%, 67%);
+
+  --clr-nt-300: hsl(0, 0%, 75%);
+  --clr-nt-400: hsl(257, 7%, 63%);
+  --clr-nt-500: hsl(255, 11%, 22%);
+  --clr-nt-600: hsl(260, 8%, 14%);
+
+  --ft-fam: "Poppins";
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ft-fam), sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  display: flex;
 }
 
 .card {
-  padding: 2em;
+  max-width: 20rem;
+  flex-direction: column;
+  background: var(--clr-prm-dark);
+  border-radius: 1rem;
+  text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+.card a {
+  color: white;
 }
