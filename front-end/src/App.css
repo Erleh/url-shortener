@@ -25,6 +25,10 @@ body {
   padding: 0;
 }
 
+nav hr {
+  width: 80%;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -49,4 +53,12 @@ a {
 
 .card a {
   color: white;
+}
+
+.call-to {
+  flex-direction: column;
+}
+
+.call-to img {
+  width: 100%;
 }
