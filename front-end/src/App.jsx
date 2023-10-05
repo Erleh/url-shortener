@@ -1,11 +1,21 @@
 import Nav from './Nav';
 import CallTo from './CallTo'
+import Linker from './Linker'
+import Results from './Results'
 
 function App() {
   return (
     <>
-    <Nav />
-    <CallTo />
+    <header>
+      <nav>
+        <Nav />
+      </nav>
+    </header>
+    <main>
+      <CallTo />
+    </main>
+    <Linker />
+    <Results />
     </>
   )
 }

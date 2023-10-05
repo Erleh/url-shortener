@@ -38,14 +38,18 @@ a {
   text-decoration: none;
 }
 
+button {
+  padding: 0;
+  border-style: none;
+}
+
 .container {
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
 }
 
 .card {
-  max-width: 20rem;
-  flex-direction: column;
   background: var(--clr-prm-dark);
   border-radius: 1rem;
   text-align: center;
@@ -55,10 +59,56 @@ a {
   color: white;
 }
 
+nav .card {
+  max-width: 20rem;
+}
+
 .call-to {
-  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .call-to img {
   width: 100%;
+}
+
+.call-to .content{
+  text-align: center;
+  padding: 2rem;
+}
+
+#link-form {
+  transform-origin: 50% 50%;
+  transform: translate(0, 50%);
+  margin-top: -50px;
+  max-width: 15rem;
+}
+
+#link-form input {
+  height: 2.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-style: none;
+  border-radius: .5rem;
+}
+
+#link-form button {
+  background-color: var(--clr-prm-high);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  height: 2.5rem;
+  border-radius: .5rem;
+}
+
+#link-form.card {
+  background-image:'./images/logo.svg';
+  max-width: 90%;
+  padding: 1.5rem;
+}
+
+#results{
+  background-color: var(--clr-nt-300);
+  border: solid red 1px;
+  width: 100%;
+  height: 50rem;
 }

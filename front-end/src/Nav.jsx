@@ -46,11 +46,9 @@ function Hamburger() {
 
 export default function Nav() {
     return (
-        <header>
-            <nav>
-                <Title title="Shortly"/>
-                <Hamburger />
-            </nav>
-        </header>
+        <>
+            <Title title="Shortly"/>
+            <Hamburger />
+        </>
     )
 }
