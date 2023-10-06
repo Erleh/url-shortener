@@ -1,7 +1,8 @@
 import Nav from './Nav';
-import CallTo from './CallTo'
-import Linker from './Linker'
-import Results from './Results'
+import CallTo from './CallTo';
+import Linker from './Linker';
+import Results from './Results';
+import Statistics from './Statistics';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
     </main>
     <Linker />
     <Results />
+    <section id="statistics">
+      <Statistics />
+    </section>
     </>
   )
 }

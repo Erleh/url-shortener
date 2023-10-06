@@ -64,23 +64,37 @@ nav .card {
 }
 
 .call-to {
+  align-items: center;
   margin-bottom: 2rem;
 }
 
 .call-to img {
-  width: 100%;
+  max-width: 27rem;
 }
 
-.call-to .content{
+.call-to .content {
+  max-width: 18rem;
   text-align: center;
-  padding: 2rem;
+}
+
+.call-to p {
+  color: var(--clr-nt-400);
+}
+
+.content a {
+  display: inline-block;
+  background: var(--clr-prm-high);
+  margin: .5rem;
+  color: white;
+  padding: .75rem 1.5rem;
+  border-radius: 2rem;
 }
 
 #link-form {
   transform-origin: 50% 50%;
   transform: translate(0, 50%);
   margin-top: -50px;
-  max-width: 15rem;
+  max-width: 18rem;
 }
 
 #link-form input {
@@ -101,8 +115,6 @@ nav .card {
 }
 
 #link-form.card {
-  background-image:'./images/logo.svg';
-  max-width: 90%;
   padding: 1.5rem;
 }
 
@@ -110,5 +122,20 @@ nav .card {
   background-color: var(--clr-nt-300);
   border: solid red 1px;
   width: 100%;
-  height: 50rem;
 }
+
+#statistics {
+  background-color: var(--clr-nt-300);
+}
+
+#statistics .card {
+  background-color: white;
+  width: 90%;
+  max-width: 23.25rem;
+}
+
+.gap {
+  height: 6rem;
+}
+
+

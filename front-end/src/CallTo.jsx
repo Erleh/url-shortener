@@ -6,7 +6,7 @@ export default function CallTo() {
             <img src={CallToSvg} alt="working illustration" />
             <div className="content">
                 <h1>More than just shorter links</h1>
-                <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
+                <p>Build your brand's recognition and<br></br> get detailed insights on how your links are performing.</p>
                 <a>Get Started</a>
             </div>
         </div>
