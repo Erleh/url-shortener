@@ -3,6 +3,8 @@ import CallTo from './CallTo';
 import Linker from './Linker';
 import Results from './Results';
 import Statistics from './Statistics';
+import CallToBanner from './CallToBanner';
+import PageFoot from './PageFoot';
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
     <section id="statistics">
       <Statistics />
     </section>
+    <section>
+      <CallToBanner />
+    </section>
+    <PageFoot />
     </>
   )
 }

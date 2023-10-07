@@ -4,6 +4,7 @@
 
   --clr-s-err: hsl(0, 87%, 67%);
 
+  --clr-nt-200: hsl(225, 33%, 95%);
   --clr-nt-300: hsl(0, 0%, 75%);
   --clr-nt-400: hsl(257, 7%, 63%);
   --clr-nt-500: hsl(255, 11%, 22%);
@@ -41,6 +42,26 @@ a {
 button {
   padding: 0;
   border-style: none;
+}
+
+footer {
+  align-items: center;
+  text-align: center;
+  background-color: var(--clr-nt-600);
+  color: white;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer li {
+  color: var(--clr-nt-400);
 }
 
 .container {
@@ -90,8 +111,31 @@ nav .card {
   border-radius: 2rem;
 }
 
-#link-form {
+.stats img{
+  position: absolute;
   transform-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stats .icon{
+  background-color: var(--clr-prm-dark);
+  padding: 1rem;
+  border-radius: 5rem;
+  overflow:visible;
+}
+
+.banner {
+  background-color: var(--clr-prm-dark);
+  padding: 4rem 0;
+  align-items: center;
+  color: white;
+}
+
+.banner h2 {
+  margin: 0 0 .5rem 0;
+}
+
+#link-form {
   transform: translate(0, 50%);
   margin-top: -50px;
   max-width: 18rem;
@@ -119,13 +163,13 @@ nav .card {
 }
 
 #results{
-  background-color: var(--clr-nt-300);
+  background-color: var(--clr-nt-200);
   border: solid red 1px;
   width: 100%;
 }
 
 #statistics {
-  background-color: var(--clr-nt-300);
+  background-color: var(--clr-nt-200);
 }
 
 #statistics .card {
@@ -136,6 +180,10 @@ nav .card {
 
 .gap {
   height: 6rem;
+}
+
+.gap-s {
+  height: 3rem;
 }
 
 
