@@ -168,6 +168,31 @@ nav .card {
   width: 100%;
 }
 
+.result {
+  max-width: 90%;
+  background-color: white;
+  color: var(--clr-nt-600);
+  border-radius: 0;
+}
+
+.result p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: .5rem;
+}
+
+.result hr {
+  margin: 0;
+  width: 100%;
+}
+
+.result a {
+  margin: .5rem;
+  text-align: left;
+  color: var(--clr-prm-high);
+}
+
 #statistics {
   background-color: var(--clr-nt-200);
 }
