@@ -7,7 +7,7 @@ export default function CallTo() {
             <div className="content">
                 <h1>More than just shorter links</h1>
                 <p>Build your brand's recognition and<br></br> get detailed insights on how your links are performing.</p>
-                <a>Get Started</a>
+                <a href="">Get Started</a>
             </div>
         </div>
     )

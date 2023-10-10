@@ -1,3 +1,8 @@
+import FacebookIcon from '../images/icon-facebook.svg';
+import TwitterIcon from '../images/icon-twitter.svg';
+import PinterestIcon from '../images/icon-pinterest.svg';
+import InstagramIcon from '../images/icon-instagram.svg';
+
 function LinksList({category, listItems}) {
     let itemList = listItems.map(item => {
         return (
@@ -17,6 +22,27 @@ function LinksList({category, listItems}) {
     )
 }
 
+function Socials() {
+    return (
+        <>
+        <ul className="container socials">
+            <li>
+                <a href=""><img src={FacebookIcon} /> </a>
+            </li>
+            <li>
+                <a href=""><img src={TwitterIcon} /> </a>
+            </li>
+            <li>
+                <a href=""><img src={PinterestIcon} /> </a>
+            </li>
+            <li>
+                <a href=""><img src={InstagramIcon} /> </a>
+            </li>
+        </ul>
+        </>
+    )
+}
+
 export default function PageFoot() {
     return (
         <>
@@ -25,6 +51,7 @@ export default function PageFoot() {
             <LinksList category="Features" listItems={["Link Shortening", "Branded Links", "Analytics"]}/>
             <LinksList category="Resources" listItems={["Blog", "Developers", "Support"]}/>
             <LinksList category="Company" listItems={["About", "Our Team", "Careers", "Contact"]}/>
+            <Socials />
         </footer>
         </>
     );

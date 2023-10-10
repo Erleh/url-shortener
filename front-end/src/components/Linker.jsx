@@ -8,6 +8,7 @@ function Result({url, shortUrl, id}) {
             <p className="url">{url}</p>
             <hr/>
             <a href={shortUrl} className="shortened" target="_blank">{shortUrl}</a>
+            <button>Copy</button>
         </li>
         </>
     );
@@ -47,8 +48,6 @@ export default function Linker() {
                     ...shortUrls,
                     [url] : res.data.result["full_short_link"]
                 });
-                // createResult(res.data.result["full_short_link"]);
-                console.log(res.data.result["full_short_link"]);
             });
     }
     

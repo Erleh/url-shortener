@@ -164,22 +164,26 @@ nav .card {
 
 #results{
   background-color: var(--clr-nt-200);
-  border: solid red 1px;
   width: 100%;
 }
 
 .result {
-  max-width: 90%;
+  max-width: 18rem;
+  padding: .7rem;
   background-color: white;
   color: var(--clr-nt-600);
   border-radius: 0;
+}
+
+.result + .result {
+  margin-top: 1rem;
 }
 
 .result p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: .5rem;
+  margin: .5rem 0;
 }
 
 .result hr {
@@ -188,9 +192,26 @@ nav .card {
 }
 
 .result a {
-  margin: .5rem;
+  margin: .5rem 0;
   text-align: left;
   color: var(--clr-prm-high);
+}
+
+.result button {
+  background-color: var(--clr-prm-high);
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.socials {
+  flex-direction: row;
+  padding: 1rem;
+  color: white;
+}
+
+.socials li {
+  padding: 1rem;
 }
 
 #statistics {
