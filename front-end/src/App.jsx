@@ -1,9 +1,9 @@
-import Nav from './Nav';
-import CallTo from './CallTo';
-import Linker from './Linker';
-import Statistics from './Statistics';
-import CallToBanner from './CallToBanner';
-import PageFoot from './PageFoot';
+import Nav from './components/Nav';
+import CallTo from './components/CallTo';
+import Linker from './components/Linker';
+import Statistics from './components/Statistics';
+import CallToBanner from './components/CallToBanner';
+import PageFoot from './components/PageFoot';
 
 function App() {
   return (
