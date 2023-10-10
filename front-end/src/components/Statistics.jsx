@@ -1,4 +1,4 @@
-import BrandRecImgSrc from './images/icon-brand-recognition.svg';
+import BrandRecImgSrc from '../images/icon-brand-recognition.svg';
 
 function InfoCard({image, title, children}) {
     return (

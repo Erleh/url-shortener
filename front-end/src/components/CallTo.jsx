@@ -1,4 +1,4 @@
-import CallToSvg from './images/illustration-working.svg';
+import CallToSvg from '../images/illustration-working.svg';
 
 export default function CallTo() {
     return (
