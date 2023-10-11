@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-function Link({label, link}) {
+function Link({label, link, classes=""}) {
     return (
         <li>
-            <a href={link}>{label}</a>
+            <a href={link} className={classes}>{label}</a>
         </li>
     )
 }
@@ -16,7 +16,7 @@ function LinkList() {
             <Link label="Resources" link="./" />
             <hr></hr>
             <Link label="Login" link="./" />
-            <Link label="Sign Up" link="./" />
+            <Link label="Sign Up" link="./" classes="signup"/>
         </ul>
     )
 }
