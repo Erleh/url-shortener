@@ -9,9 +9,7 @@ function App() {
   return (
     <>
     <header>
-      <nav>
-        <Nav />
-      </nav>
+      <Nav />
     </header>
     <main>
       <CallTo />

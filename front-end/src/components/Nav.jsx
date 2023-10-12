@@ -1,5 +1,17 @@
 import { useState } from 'react'
 
+function HamburgerIcon({clicked, active}) {
+    return (
+        <>
+        <div onClick={clicked} className="container hamburger">
+            <div className={(active ? "change" : "") + " bar1"}/>
+            <div className={(active ? "change" : "") + " bar2"}/>
+            <div className={(active ? "change" : "") + " bar3"}/>
+        </div>
+        </>
+    )
+}
+
 function Link({label, link, classes=""}) {
     return (
         <li>
@@ -29,7 +41,7 @@ function Title({title}) {
 
 function Hamburger() {
     // temp setting pressed to true so it is visible
-    const [pressed, setPressed] = useState(true);
+    const [pressed, setPressed] = useState(false);
 
     let handleClick = () => {
         setPressed(p => !p);
@@ -38,7 +50,7 @@ function Hamburger() {
     // Place hamburger icon in div
     return (
         <>
-        <div onClick={handleClick}></div>
+        <HamburgerIcon clicked={handleClick} active={pressed}/>
         {pressed ? <LinkList /> : null}
         </>
     )
@@ -47,8 +59,10 @@ function Hamburger() {
 export default function Nav() {
     return (
         <>
+        <nav className="container">
             <Title title="Shortly"/>
             <Hamburger />
+        </nav>
         </>
     )
 }
