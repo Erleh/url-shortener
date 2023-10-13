@@ -12,23 +12,23 @@ function HamburgerIcon({clicked, active}) {
     )
 }
 
-function Link({label, link, classes=""}) {
+function Link({label, link, active, classes=""}) {
     return (
         <li>
-            <a href={link} className={classes}>{label}</a>
+            <a href={link} className={(!active ? "invisible " : "") + classes}>{label}</a>
         </li>
     )
 }
 
-function LinkList() {
+function LinkList({active}) {
     return (
-        <ul className="container card">
-            <Link label="Features" link="./" />
-            <Link label="Pricing" link="./" />
-            <Link label="Resources" link="./" />
+        <ul className={(active ? "active" : "inactive") + " container card"}>
+            <Link label="Features" link="./" active={active}/>
+            <Link label="Pricing" link="./" active={active}/>
+            <Link label="Resources" link="./" active={active}/>
             <hr></hr>
-            <Link label="Login" link="./" />
-            <Link label="Sign Up" link="./" classes="signup"/>
+            <Link label="Login" link="./" active={active}/>
+            <Link label="Sign Up" link="./" classes="signup" active={active}/>
         </ul>
     )
 }
@@ -51,7 +51,7 @@ function Hamburger() {
     return (
         <>
         <HamburgerIcon clicked={handleClick} active={pressed}/>
-        {pressed ? <LinkList /> : null}
+        <LinkList active={pressed}/>
         </>
     )
 }

@@ -45,12 +45,23 @@ nav .card {
   transform: translate(-50%, 60%);
   width: 95%;
   height: 0;
-  display: none;
-  transition-property: height;
+  transition-property: height, opacity;
+  transition-duration: .5s;
 }
 
-nav .card .active {
-  height: 100%;
+nav .card.active {
+  height: 304px;
+  opacity: 100%;
+}
+
+nav .card.inactive {
+  pointer-events: none;
+  padding: 0;
+  opacity: 0;
+}
+
+.invisible {
+  opacity: 0;
 }
 
 nav .title {
@@ -298,4 +309,36 @@ nav .card {
   height: 3rem;
 }
 
+@media screen and (min-width: 768px){
+  /* change nav here */
 
+  /*  */
+
+  /* change call to */
+  .container.call-to {
+    flex-direction: row-reverse;
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .call-to img {
+    max-width: 100%;
+  }
+
+  .call-to .content {
+    text-align: left;
+  }
+  /*  */
+
+  /* change form  */
+
+  /*  */
+
+  /* change stats section  */
+
+  /*  */
+
+  /* change footer  */
+
+  /*  */
+}
