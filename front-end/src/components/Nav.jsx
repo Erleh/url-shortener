@@ -1,5 +1,11 @@
 import { useState } from 'react'
 
+function Title({title}) {
+    return (
+        <p className="title">{title}</p>
+    )
+}
+
 function HamburgerIcon({clicked, active}) {
     return (
         <>
@@ -12,7 +18,7 @@ function HamburgerIcon({clicked, active}) {
     )
 }
 
-function Link({label, link, active, classes=""}) {
+function Link({label, link, active=true, classes=""}) {
     return (
         <li>
             <a href={link} className={(!active ? "invisible " : "") + classes}>{label}</a>
@@ -20,7 +26,7 @@ function Link({label, link, active, classes=""}) {
     )
 }
 
-function LinkList({active}) {
+function HamList({active}) {
     return (
         <ul className={(active ? "active" : "inactive") + " container card"}>
             <Link label="Features" link="./" active={active}/>
@@ -30,12 +36,6 @@ function LinkList({active}) {
             <Link label="Login" link="./" active={active}/>
             <Link label="Sign Up" link="./" classes="signup" active={active}/>
         </ul>
-    )
-}
-
-function Title({title}) {
-    return (
-        <p className="title">{title}</p>
     )
 }
 
@@ -50,18 +50,49 @@ function Hamburger() {
     // Place hamburger icon in div
     return (
         <>
+        <Title title="Shortly"/>
         <HamburgerIcon clicked={handleClick} active={pressed}/>
-        <LinkList active={pressed}/>
+        <HamList active={pressed}/>
         </>
     )
 }
 
-export default function Nav() {
+function ClassicLinks() {
+    return (
+        <>
+        <ul className={"container"}>
+            <div id="nav-links" className={"container"}>
+                <Link label="Features" link="./"/>
+                <Link label="Pricing" link="./"/>
+                <Link label="Resources" link="./"/>
+            </div>
+            <div id="signup-links" className={"container"}>
+                <Link label="Login" link="./"/>
+                <Link label="Sign Up" link="./" classes="signup"/>
+            </div>
+        </ul>
+        </>
+    )
+}
+
+function ClassicNav() {
+    return (
+        <>
+            <Title title="Shortly"/>
+            <ClassicLinks />
+        </>
+    )
+}
+
+export default function Nav({screenWidth, minWidth}) {
     return (
         <>
         <nav className="container">
-            <Title title="Shortly"/>
-            <Hamburger />
+            {
+                screenWidth <= minWidth ? 
+                <Hamburger /> :
+                <ClassicNav />
+            }
         </nav>
         </>
     )
