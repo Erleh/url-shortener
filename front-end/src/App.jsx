@@ -36,7 +36,7 @@ function App() {
     </main>
     <Linker />
     <section id="statistics">
-      <Statistics />
+      <Statistics screenWidth={screenWidth} minWidth={minWidth}/>
     </section>
     <section>
       <CallToBanner />

@@ -188,10 +188,26 @@ nav .card {
   border-radius: 2rem;
 }
 
+.stat {
+  text-align: center;
+  color: var(--clr-nt-400);
+  max-width: 21rem;
+}
+
+.stat h3 {
+  color: var(--clr-prm-dark);
+  margin: 1rem 0 0 0;
+  font-size: 1.5rem;
+}
+
+.stat p {
+  margin-bottom: 0;
+}
+
 .stats img{
   position: absolute;
   transform-origin: 50% 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -90%);
 }
 
 .stats .icon{
@@ -199,6 +215,26 @@ nav .card {
   padding: 1rem;
   border-radius: 5rem;
   overflow:visible;
+}
+
+.stats {
+  position: relative;
+  padding: 2rem;
+}
+
+.stats h2 {
+  margin: 0;
+  text-align: left;
+}
+
+.stats p {
+  color: var(--clr-nt-400);
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.stats img {
+  max-width: 4.5rem;
 }
 
 .banner {
@@ -351,24 +387,28 @@ nav .card {
   /* change call to */ 
   .container.call-to {
     margin-top: 4rem;
-    max-width: 64rem;
+    max-width: 60rem;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1rem;
     overflow: hidden;
   }
   
   .call-to img {
-    transform:scale(1.2);
+    transform:scale(1.3);
   }
 
   .call-to .content {
     margin: 1rem;
-    max-width: 26rem;
+    max-width: 28rem;
     text-align: left;
   }
 
   .call-to h1 {
     margin: 0;
+    max-width: 25rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 
   .call-to a {
@@ -402,10 +442,56 @@ nav .card {
   /*  */
 
   /* change stats section  */
+  .stat-cards {
+    flex-direction: row;
+    max-width: 75rem;
+  }
 
-  /*  */
+  .stats img{
+    transform: translate(-200%, -90%);
+  }
+
+  .stat {
+    max-width: 30rem;
+  }
+
+  .stat-cards .stats:first-child {
+    transform: translateY(-20%);
+  }
+
+  .stat-cards .stats:last-child {
+    transform: translateY(20%);
+  }
+
+  .stats {
+    min-width: 15rem;
+    max-width: 21rem;
+  }
+
+  .stat h3 {
+    font-size: 2rem;
+  }
 
   /* change footer  */
+  footer.container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4rem;
+  }
 
-  /*  */
+  footer h3 {
+    margin: 0 auto;
+  }
+
+  footer .socials {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .footer-links {
+    margin: 0 2rem;
+    text-align: left;
+  }
+
+  
 }

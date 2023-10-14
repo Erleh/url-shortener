@@ -14,10 +14,12 @@ function LinksList({category, listItems}) {
 
     return (
         <>
-        <p>{category}</p>
-        <ul>
-            {itemList}
-        </ul>
+        <div className="footer-links">
+            <p>{category}</p>
+            <ul>
+                {itemList}
+            </ul>
+        </div>
         </>
     )
 }
