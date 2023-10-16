@@ -8,7 +8,7 @@ function Result({url, shortUrl, id}) {
             <p className="url">{url}</p>
             <hr/>
             <a href={shortUrl} className="shortened" target="_blank">{shortUrl}</a>
-            <button>Copy</button>
+            <button className="button">Copy</button>
         </li>
         </>
     );
@@ -65,7 +65,7 @@ export default function Linker() {
         <form id="link-form" className="container card">
             <label htmlFor="input" />
             <input onChange={ handleInput } type="text" id="input" name="link" placeholder="Shorten a link here..." />
-            <button onClick={ handleButton }>Shorten It!</button>
+            <button className="button" onClick={ handleButton }>Shorten It!</button>
         </form>
         <Results>
             {resList}

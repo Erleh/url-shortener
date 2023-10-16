@@ -3,7 +3,7 @@ export default function CallToBanner() {
         <>
         <div className="container banner content">
             <h2>Boost your links today</h2>
-            <a href="">Get Started</a>
+            <a className="button" href="">Get Started</a>
         </div>
         </>
     )

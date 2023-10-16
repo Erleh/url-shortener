@@ -1,4 +1,5 @@
 :root {
+  --clr-prm-high-sel: hsl(180, 42%, 74%);
   --clr-prm-high: hsl(180, 66%, 49%);
   --clr-prm-dark: hsl(257, 27%, 26%);
 
@@ -19,11 +20,17 @@
 
 html {
   font-family: var(--ft-fam), sans-serif;
+  background-color: var(--clr-nt-600);
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: white;
+}
+
+.dark-bg {
+  background-color: var(--clr-prm-dark);
 }
 
 nav.container {
@@ -238,6 +245,7 @@ nav .card {
 }
 
 .banner {
+  background-image: url("./images/bg-boost-mobile.svg");
   background-color: var(--clr-prm-dark);
   padding: 4rem 0;
   align-items: center;
@@ -249,6 +257,7 @@ nav .card {
 }
 
 #link-form {
+  background-image: url("./images/bg-shorten-desktop.svg");
   transform: translate(0, 50%);
   margin-top: -50px;
   max-width: 18rem;
@@ -269,6 +278,10 @@ nav .card {
   font-size: 1rem;
   height: 2.5rem;
   border-radius: .5rem;
+}
+
+#link-form button:hover {
+  background-color: var(--clr-prm-high-sel);
 }
 
 #link-form.card {
@@ -345,6 +358,22 @@ nav .card {
   height: 3rem;
 }
 
+.button:hover {
+  background-color: var(--clr-prm-high-sel);
+}
+
+#nav-links a:hover {
+  color: var(--clr-nt-100);
+}
+
+footer a {
+  color: var(--clr-nt-400);
+}
+
+footer a:hover {
+  color: var(--clr-prm-high);
+}
+
 @media screen and (min-width: 768px){
   /* change nav here */
   header, main {
@@ -353,6 +382,10 @@ nav .card {
 
   header {
     padding-right: 2rem;
+  }
+
+  nav.container {
+    max-width: 58rem;
   }
 
   nav ul {
@@ -390,12 +423,12 @@ nav .card {
     max-width: 60rem;
     flex-direction: row-reverse;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 3rem;
     overflow: hidden;
   }
   
   .call-to img {
-    transform:scale(1.3);
+    transform:scale(1.5);
   }
 
   .call-to .content {
@@ -472,6 +505,11 @@ nav .card {
     font-size: 2rem;
   }
 
+  .banner {
+    max-width: 90rem; 
+    background-image: url("./images/bg-boost-desktop.svg");
+  }
+
   /* change footer  */
   footer.container {
     flex-direction: row;
@@ -484,6 +522,7 @@ nav .card {
   }
 
   footer .socials {
+    flex-direction: column;
     padding-top: 0;
     margin-top: 0;
   }
@@ -492,6 +531,10 @@ nav .card {
     margin: 0 2rem;
     text-align: left;
   }
+}
 
-  
+@media screen and (min-width:1000px) {
+  footer .socials {
+    flex-direction: row;
+  }
 }

@@ -38,7 +38,7 @@ function App() {
     <section id="statistics">
       <Statistics screenWidth={screenWidth} minWidth={minWidth}/>
     </section>
-    <section>
+    <section className="dark-bg">
       <CallToBanner />
     </section>
     <PageFoot />

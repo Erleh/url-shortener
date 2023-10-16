@@ -68,7 +68,7 @@ function ClassicLinks() {
             </div>
             <div id="signup-links" className={"container"}>
                 <Link label="Login" link="./"/>
-                <Link label="Sign Up" link="./" classes="signup"/>
+                <Link label="Sign Up" link="./" classes="signup button"/>
             </div>
         </ul>
         </>
