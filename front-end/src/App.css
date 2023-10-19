@@ -244,6 +244,12 @@ nav .card {
   max-width: 4.5rem;
 }
 
+.chain-a {
+  background-color: var(--clr-prm-high);
+  height: 100%;
+  width: .5rem;
+}
+
 .banner {
   background-image: url("./images/bg-boost-mobile.svg");
   background-color: var(--clr-prm-dark);
@@ -264,9 +270,9 @@ nav .card {
 }
 
 #link-form input {
+  width: 100%;
   height: 2.5rem;
   padding: 1rem;
-  margin-bottom: 1rem;
   border-style: none;
   border-radius: .5rem;
 }
@@ -274,10 +280,24 @@ nav .card {
 #link-form button {
   background-color: var(--clr-prm-high);
   color: white;
+  margin-top: .7rem;
   font-weight: 700;
   font-size: 1rem;
   height: 2.5rem;
   border-radius: .5rem;
+}
+
+#link-form input.input-error{
+  border: 1px solid red;
+}
+
+.link-error {
+  text-align: left;
+  margin: .2rem;
+  font-style:italic;
+  font-size: .6rem;
+  font-weight: 500;
+  color: red;
 }
 
 #link-form button:hover {
@@ -291,6 +311,10 @@ nav .card {
 #results{
   background-color: var(--clr-nt-200);
   width: 100%;
+}
+
+#results ul {
+  margin: 0;
 }
 
 .result {
@@ -326,8 +350,18 @@ nav .card {
 .result button {
   background-color: var(--clr-prm-high);
   color: white;
-  padding: .5rem;
-  border-radius: .5rem;
+  font-weight: 700;
+  padding: .8rem;
+  border-radius: .2rem;
+}
+
+.url-links {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.url-links button.copied {
+  background-color: var(--clr-prm-dark);
 }
 
 .socials {
@@ -374,6 +408,7 @@ footer a:hover {
   color: var(--clr-prm-high);
 }
 
+
 @media screen and (min-width: 768px){
   /* change nav here */
   header, main {
@@ -409,12 +444,11 @@ footer a:hover {
 
   #signup-links {
     justify-self: flex-end;
-    width: 50%;
   }
 
   nav .signup {
-    width: 100%;
-    padding: .5rem 1rem;
+    width: 6rem;
+    padding: .4rem 1rem;
   }
 
   /* change call to */ 
@@ -465,17 +499,47 @@ footer a:hover {
     margin: 0;
   }
 
+  #link-input {
+    width: 100%;
+  }
+
   #link-form button {
+    margin: 0;
     width: 30%;
   }
 
   #link-form * + button {
     margin-left: 1rem;
   }
+
+  .link-error {
+    position: absolute;
+  }
   /*  */
+
+  .container.result {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 45rem;
+  }
+
+  #results .url-links {
+    margin: 0;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .url-links button {
+    width: 6rem;
+  }
+
+  .url {
+    width: 100%;
+  }
 
   /* change stats section  */
   .stat-cards {
+    justify-content: center;
     flex-direction: row;
     max-width: 75rem;
   }
@@ -496,13 +560,26 @@ footer a:hover {
     transform: translateY(20%);
   }
 
+  #statistics .card {
+    width: 100%;
+  }
+
   .stats {
+    margin: 0;
     min-width: 15rem;
     max-width: 21rem;
   }
 
   .stat h3 {
     font-size: 2rem;
+  }
+
+  .chain-b {
+    align-self: center;
+    background-color: var(--clr-prm-high);
+    height: .5rem;
+    width: 100%;
+    max-width: 2rem;
   }
 
   .banner {

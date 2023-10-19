@@ -2,12 +2,14 @@ import BrandRecImgSrc from '../images/icon-brand-recognition.svg';
 import DetailedImgSrc from '../images/icon-detailed-records.svg';
 import CustomizeImgSrc from '../images/icon-fully-customizable.svg';
 
-function InfoCard({image, title, screenWidth, minWidth, children}) {
+function InfoCard({image, title, screenWidth, minWidth, chain=false, children}) {
     return (
         <>
         {
             screenWidth < minWidth ? 
-            <div className="gap" /> :
+            <div className={chain ? "container chain-a gap" : "gap"} /> :
+            chain ? 
+            <div className={chain ? "container chain-b gap" : null} /> :
             null
         }
         <div className="container card stats">
@@ -38,12 +40,10 @@ export default function Statistics({screenWidth, minWidth}) {
             <InfoCard image={BrandRecImgSrc} title="Brand Recognition" screenWidth={screenWidth} minWidth={minWidth}>
                 <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.</p>
             </InfoCard>
-            <InfoCard image={DetailedImgSrc} title="Detailed Records" screenWidth={screenWidth} minWidth={minWidth}>
-                <div className="chain-a"/>
+            <InfoCard image={DetailedImgSrc} title="Detailed Records" screenWidth={screenWidth} minWidth={minWidth} chain={true}>
                 <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions</p>
             </InfoCard>
-            <div className="chain-b"/>
-            <InfoCard image={CustomizeImgSrc} title="Fully Customizable" screenWidth={screenWidth} minWidth={minWidth}>
+            <InfoCard image={CustomizeImgSrc} title="Fully Customizable" screenWidth={screenWidth} minWidth={minWidth} chain={true}>
                 <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
             </InfoCard>
         </div>
