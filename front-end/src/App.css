@@ -519,6 +519,7 @@ footer a:hover {
 
   .container.result {
     flex-direction: row;
+    text-align: left;
     justify-content: space-between;
     max-width: 45rem;
   }

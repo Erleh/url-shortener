@@ -15,8 +15,8 @@ function App() {
     setWidth(window.innerWidth);
   }
 
-  // Registers current screen width as a state using side effects
   useEffect(() => {
+    // Registers current screen width as a state using side effects
     // Connects to the browser api
     window.addEventListener("resize", handleResize);
 

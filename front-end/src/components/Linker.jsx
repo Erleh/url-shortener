@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 
 function Result({url, shortUrl, id, screenWidth, minWidth, children}) {
@@ -34,10 +35,21 @@ function Results({children}) {
 }
 
 export default function Linker({screenWidth, minWidth}) {
+    const initialValue = JSON.parse(localStorage.getItem("savedUrls"));
+
     const [url, setUrl] = useState("");
     const [error, setError] = useState(false);
-    const [shortUrls, setShortUrls] = useState({});
+    const [shortUrls, setShortUrls] = useState(initialValue);
+    const [isUpdated, setIsUpdated] = useState(false);
     const [copied, setCopied] = useState("");
+
+    useEffect(() => {
+        // if updated -> save current list to localStorage
+        if(isUpdated) {
+            localStorage.setItem("savedUrls", JSON.stringify(shortUrls));
+            setIsUpdated(false);
+        }
+    });
 
     function handleCopy(key) {
         setCopied(key);
@@ -64,7 +76,6 @@ export default function Linker({screenWidth, minWidth}) {
         );
 
         for(let key in shortUrls){
-            console.log(key);
             res.push(   <Result     url={key} 
                                     shortUrl={shortUrls[key]} 
                                     key={key} 
@@ -94,7 +105,12 @@ export default function Linker({screenWidth, minWidth}) {
             link = apiResponse.data.res;
         }
 
-        setShortUrls({...shortUrls, [ogLink]: link});
+        if (link) {
+            let newLinks = {...shortUrls, [ogLink]: link};
+        
+            setShortUrls(newLinks);
+            setIsUpdated(true);
+        }
     }
     
     function handleInput(e) {
